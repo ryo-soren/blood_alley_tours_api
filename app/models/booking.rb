@@ -4,7 +4,7 @@ class Booking < ApplicationRecord
     validates :phone_number, presence: true
     VALID_EMAIL_REGEX = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
     validates :email, format: VALID_EMAIL_REGEX, presence: true
-    validates :party_size, numericality: { greater_or_equal_to: 2 } 
+    validates :party_size, numericality: { greater_or_equal_to: 1 } 
     validates :date, presence: true
     validates :time, presence: true
     validates :price, numericality: true
