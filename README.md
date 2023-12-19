@@ -1,24 +1,45 @@
-# README
+# Blood Alley Tours API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## What is it?
 
-Things you may want to cover:
+The project was built for Blood Alley Tours, a new company offering walking tours in the Gastown neighbourhood of Vancouver, British Columbia. They requested for a simply designed booking site.
 
-* Ruby version
+It was bootstrapped with [rails new blood_alley_tours_api](https://guides.rubyonrails.org/getting_started.html) and the front end is built on a seperate repository called "[blood_alley_tours](https://github.com/ryo-soren/blood_alley_tours)". 
 
-* System dependencies
+The two projects are to be run at the same time.
 
-* Configuration
+## What does it do?
 
-* Database creation
+The site has the ability for potential customers to both book and pay for a walking tour, as well as reaching out to the Blood Alley Tours team for any general inquiries. Upon booking, customers get an email with the details of their booking.
 
-* Database initialization
+## Notable Features
 
-* How to run the test suite
+* Active-Mailer gem is being used to handle email communication with customers, on all new booking as well as for general inquiries
+* Ensured protection of user's payment information using Ruby on Rails environment variables 
 
-* Services (job queues, cache servers, search engines, etc.)
+## How is it build?
 
-* Deployment instructions
+* Back-End: Ruby on Rails API, Active-Mailer
+* Database: PostgreSQL
+* Dependencies: 
+  * gem "pg", "~> 1.1"
+  * gem "bcrypt", "~> 3.1.7"
+  * gem 'active_model_serializers', '~> 0.10.2'
+  * gem 'rack-cors'
+  * gem 'stripe'
+  * gem "letter_opener"
 
-* ...
+## Clone the repository
+
+Follow the steps in [this link](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) to clone the repository
+
+## Set up the project for development
+
+### `bundle install`
+
+Installs all dependencies required for the project's full functionality
+
+### `rails s`
+
+Runs the app in the development mode.
+Open [http://localhost:3300](http://localhost:3300) to view it in your browser.
